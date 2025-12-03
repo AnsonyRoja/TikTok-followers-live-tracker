@@ -33,7 +33,7 @@ const fetchStats = async () => {
 
     try {
         const res = await axios.get(TIKTOK_API, { withCredentials: false });
-        console.log('esta es la respuesta ')
+        console.log('esta es la respuesta ', res)
         return res.data;
     } catch (err) {
         if (err.response?.status === 401) {
