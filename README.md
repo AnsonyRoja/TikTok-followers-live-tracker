@@ -61,6 +61,7 @@ El usuario tiene una meta configurable (por defecto 1000 seguidores) y la app mu
 
 ## 📂 Estructura del proyecto
 
+```text
 /client
 ├── src
 │ ├── components
@@ -77,3 +78,4 @@ El usuario tiene una meta configurable (por defecto 1000 seguidores) y la app mu
 ├── index.js
 ├── package.json
 └── .env (opcional)
+```
