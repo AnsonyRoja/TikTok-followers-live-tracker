@@ -1,0 +1,278 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a001b;
+    /* color de marca */
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    /* texto por defecto en blanco */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.profile-card {
+    background-color: #1a0a3b;
+    /* ligeramente más claro que el fondo */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    width: 350px;
+    text-align: center;
+    color: #ffffff;
+    /* texto en blanco */
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #ff0050;
+    /* borde rojo para destacar */
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat strong {
+    color: #ffffff;
+}
+
+.stat span {
+    color: #ffffff;
+}
+
+.progress-container {
+    background-color: #2a002b;
+    /* barra de fondo más oscuro */
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #ff0050;
+    /* color de barra de marca */
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 10px 0 0 10px;
+}
+
+
+.floating-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    /* más transparente sobre fondo oscuro */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    animation: floatUp 2s forwards;
+    pointer-events: none;
+    color: #ffffff;
+    /* texto en blanco */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.tiktok-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tiktok-footer:hover {
+    transform: scale(1.05);
+}
+
+.tiktok-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #ff0050;
+    /* borde base */
+    box-shadow: 0 0 10px #ff0050, 0 0 20px #ff0050, 0 0 30px #ff0050;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Animación de glow */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff0050, 0 0 20px #ff0050, 0 0 30px #ff0050;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ff0050, 0 0 30px #ff0050, 0 0 40px #ff0050;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ff0050, 0 0 20px #ff0050, 0 0 30px #ff0050;
+    }
+}
+
+
+.spinner {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    /* borde gris claro */
+    border-top: 6px solid #ff0050;
+    /* color de la marca */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container p {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -120%);
+    }
+}
+
+.reward-badge {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff0050;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.goal-reward {
+    margin-top: 20px;
+    background: #ff0050;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* ============================================
+   📱 RESPONSIVE (TELÉFONOS PEQUEÑOS)
+============================================ */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stat strong {
+        font-size: 16px;
+    }
+
+    .stat span {
+        font-size: 12px;
+    }
+
+    .progress-container {
+        height: 15px;
+    }
+
+    .floating-message {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .tiktok-footer {
+        font-size: 12px;
+        margin-top: 25px;
+    }
+
+    .tiktok-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================
+   📱📱 RESPONSIVE (TELÉFONOS MUY PEQUEÑOS)
+============================================ */
+@media (max-width: 360px) {
+    .profile-card {
+        max-width: 95%;
+    }
+
+    .floating-message {
+        bottom: 10%;
+    }
+}
