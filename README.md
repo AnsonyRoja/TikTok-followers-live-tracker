@@ -65,11 +65,11 @@ El usuario tiene una meta configurable (por defecto 1000 seguidores) y la app mu
 /client
 ├── src
 │ ├── components
+│ │ ├── img
+│ │ ├── followers.css
 │ │ └── FollowersBars.jsx
-│ ├── assets
 │ ├── App.jsx
 │ └── index.js
-├── followers.css
 ├── .env
 └── package.json
 
@@ -79,3 +79,18 @@ El usuario tiene una meta configurable (por defecto 1000 seguidores) y la app mu
 ├── package.json
 └── .env (opcional)
 ```
+
+## ⚙️ Variables de entorno
+
+**Frontend (`/client/.env`)**  
+
+```text
+REACT_APP_TIKTOK_API=https://url/tiktok/user-stats
+REACT_APP_LOGIN_API=https://url/login/tiktok
+```
+
+**Importación en React:**
+
+```javascript
+const TIKTOK_API = process.env.REACT_APP_TIKTOK_API;
+const LOGIN_API = process.env.REACT_APP_LOGIN_API;
