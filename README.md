@@ -94,3 +94,60 @@ REACT_APP_LOGIN_API=https://url/login/tiktok
 ```javascript
 const TIKTOK_API = process.env.REACT_APP_TIKTOK_API;
 const LOGIN_API = process.env.REACT_APP_LOGIN_API;
+```
+
+▶️ Cómo ejecutar el proyecto
+
+1️⃣ Instalar dependencias
+
+- Frontend:
+
+```javascript
+npm install
+```
+- Backend:
+
+```javascript
+cd server
+npm install
+```
+
+```javascript
+Ejecutar Ambos Repositorio
+npm start
+```
+
+**La app se abrirá en: http://localhost:3000, en el Cliente y en el Servidor http://localhost:3001**
+
+🌐 Deploy
+
+- Backend en Vercel:
+
+- Subir /server
+
+- Configurar variables en Vercel Dashboard
+
+- Redis se mantiene en la nube
+
+- Frontend en Vercel o Netlify:
+
+- Subir /client
+
+- Configurar .env en el panel (NO subir al repositorio)
+
+- 📸 Vista previa
+
+- 👤 Avatar del usuario
+
+- 📈 Conteo animado de seguidores
+
+- 🎉 Mensajes flotantes cuando suben seguidores
+
+- 🔥 Notificaciones cuando estás cerca de la meta
+
+- 🎁 Recompensa cuando se alcanza el objetivo
+
+- 📄 Licencia
+
+**Este proyecto está bajo la licencia MIT. Puedes modificarlo o usarlo libremente.**
+
