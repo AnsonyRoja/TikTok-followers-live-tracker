@@ -27,13 +27,10 @@ const fetchStats = async () => {
     if (!TIKTOK_API) throw new Error("TIKTOK_API no está definido. Verifica variables de entorno.");
     if (!LOGIN_API) throw new Error("LOGIN_API no está definido. Verifica variables de entorno.");
 
-    await setInterval(() => {
-        console.log('esperando 2 segundos');
-    }, 2000)
 
     try {
         const res = await axios.get(TIKTOK_API, { withCredentials: false });
-        console.log('esta es la respuesta ', res)
+
         return res.data;
     } catch (err) {
         if (err.response?.status === 401) {
@@ -109,10 +106,8 @@ const FollowersBars = () => {
     if (error)
         return (
             <div className="container">
-                <p>Error cargando perfil. Verifica tus variables de entorno o inicia sesión manualmente.</p>
-                {LOGIN_API && (
-                    <a href={LOGIN_API} target="_blank" rel="noreferrer">Iniciar sesión</a>
-                )}
+                <div className="spinner"></div>
+                <p>Actualizando...</p>
             </div>
         );
 
