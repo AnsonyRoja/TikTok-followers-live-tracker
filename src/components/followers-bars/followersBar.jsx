@@ -9,6 +9,7 @@ const LOGIN_API = process.env.REACT_APP_LOGIN_API;
 
 const FOLLOWER_GOAL = 1000;
 
+
 const FOLLOWER_MESSAGES = [
     "🎉 Bienvenido a la comunidad!",
     "💖 Gracias por seguirme!",
